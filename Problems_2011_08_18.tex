@@ -1,0 +1,235 @@
+\documentclass[12pt]{article}
+%\usepackage{fullpage}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{mathrsfs}
+\usepackage{tweaklist}
+\usepackage{algorithmic,algorithm}
+\usepackage{ulem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is FULLPAGE.STY by H.Partl, Version 2 as of 15 Dec 1988.
+% Document Style Option to fill the paper just like Plain TeX.
+
+\typeout{Style Option FULLPAGE Version 2 as of 15 Dec 1988}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+
+\textheight 8.9in
+
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+
+\textwidth 6.5in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{-0.8in}
+\setlength{\textwidth}{6.8in}
+\setlength{\textheight}{9.5in}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{1ex}
+
+\input{code}
+
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{thm}{Theorem}
+
+\newcommand{\cost}{\operatorname{cost}}
+\newcommand{\opt}{\mathrm{OPT}}
+
+\usepackage{graphicx}
+\begin{document}
+
+\setlength{\fboxrule}{.5mm}\setlength{\fboxsep}{1.2mm}
+\newlength{\boxlength}\setlength{\boxlength}{\textwidth}
+\addtolength{\boxlength}{-4mm}
+\begin{center}\framebox{\parbox{\boxlength}{\bf
+CS Tutoring \hfill Author: Haden Lee\\ 
+Problem Set \#1 \hfill Date: 08/18/2011}}\end{center}
+\vspace{5mm}
+
+\def\ind{\hspace*{0.3in}}
+\def\gap{0.2in}
+
+
+\section{Two Missing Numbers}
+\subsection*{Description}
+\textit{This problem is similar to the missing number problem you saw before.}
+
+You are given a natural number $N$ where $3 \leq N \leq 100$. 
+Then you are also given $N$ distinct natural numbers ranged between $1$ and $N+2$, inclusive.  You want to find the two missing numbers. 
+
+\subsection*{Input Format}
+You are first given $N$, and then you are given $N$ numbers as described above. 
+
+\subsection*{Output Format}
+You output the two missing numbers in order. 
+
+\subsection*{Sample Input 1}
+\begin{verbatim}
+5
+5 7 1 4 2
+\end{verbatim}
+\subsection*{Sample Output 1}
+\begin{verbatim}
+3 6
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+8
+1 2 3 4 7 8 9 10
+\end{verbatim}
+\subsection*{Sample Output 2}
+\begin{verbatim}
+5 6
+\end{verbatim}
+
+
+
+\newpage
+
+\section{Caesar Cipher}
+\subsection*{Description}
+\textit{From Wikipedia} 
+
+In cryptography, a Caesar cipher is one of the simplest known encryption techniques.  It is a type of substitution cipher in which each letter in the plain-text is replaced by a letter \textit{some fixed number of positions} down the alphabet. For example, with a shift of $3$, A would be replaced by D, B would become E, and so on. The method is named after Julius Caesar, who used it to communicate with his generals.
+
+
+The transformation can be represented by aligning two alphabets; the cipher alphabet is the plain alphabet rotated left or right by some number of positions. For instance, here is a Caesar cipher using a left rotation of three places (the shift parameter, here 3, is used as the key):
+\begin{verbatim}
+Plain:    ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Cipher:   DEFGHIJKLMNOPQRSTUVWXYZABC
+\end{verbatim}
+
+When encrypting, a person looks up each letter of the message in the "plain" line and writes down the corresponding letter in the "cipher" line. Deciphering is done in reverse.
+\begin{verbatim}
+Ciphertext: WKH TXLFN EURZQ IRA MXPSV RYHU WKH ODCB GRJ
+Plaintext:  the quick brown fox jumps over the lazy dog
+\end{verbatim}
+
+\subsection*{Input Format}
+You are given a string which may be a cipher-text or plain-text. The given string consists only of upper-case alphabets.  Then, you are given an integer that denotes the shift that was used in encryption or should be used in decryption.  This integer ranges between $1$ and $25$, inclusive. 
+
+\subsection*{Output Format}
+You first output the encrypted string using the given shift.
+Next, you output the decrypted string using the given shift. 
+
+\subsection*{Sample Input 1}
+\begin{verbatim}
+GRJ
+3
+\end{verbatim}
+\subsection*{Sample Output 1}
+\begin{verbatim}
+JUM
+DOG
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+ABCDE
+1
+\end{verbatim}
+\subsection*{Sample Output 2}
+\begin{verbatim}
+BCDEF
+ZABCD
+\end{verbatim}
+
+
+\newpage
+
+\section{Fibonacci Numbers}
+\subsection*{Description}
+In Mathematics, the Fibonacci numbers are defined as follows:
+
+\begin{equation*}
+F_n = F_{n-1} + F_{n-2}
+\end{equation*}
+
+with seed values $F_0 = 0$ and $F_1 = 1$. 
+
+Given some number $n$, you want to compute the value of $F_n$. 
+
+\subsection*{Input Format}
+You are given an integer $n$ where $0 \leq n \leq 1,000$. 
+
+\subsection*{Output Format}
+Output the value of $F_n$.  Since $F_n$ could become really large, you should output $F_n$ modulo 100,007 (that is the remainder of $F_n$ divided by 100,007).
+
+\subsection*{Sample Input 1}
+\begin{verbatim}
+5
+\end{verbatim}
+\subsection*{Sample Output 1}
+\begin{verbatim}
+5
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+12
+\end{verbatim}
+\subsection*{Sample Output 2}
+\begin{verbatim}
+144
+\end{verbatim}
+
+
+
+
+
+
+\newpage
+
+\section{Flower Shop}
+\subsection*{Description}
+You are the owner of a really big flower shop that delivers flowers to customers.  On a particular day, you decided to have the following promotional event.  
+
+You ask $N$ customers to write down the highest price they are willing to pay, provided that you deliver the most beautiful flower bouquet in time.  After collecting the $N$ numbers (the prices), you will decide the border line price $p$ such that any customer who is willing to pay $p$ or higher will pay $p$ dollars and receive the bouquet, but all other customers who are willing to pay strictly less than $p$ will NOT pay and will NOT receive any bouquets. 
+
+As a businessman, you want to maximize profit by choosing the optimal value $p$.  You want to write a program that finds such $p$ for you. 
+
+\subsection*{Input Format}
+You are first given the number of customers, $N$ where $2 \leq N \leq 20$. Then, you are given $N$ natural numbers ($m_1, m_2, \dots, m_N$) where $m_i$ represents the maximum amount of money that customer $i$ is willing to pay where $1 \leq i \leq N$. You can assume that $1 \leq m_i \leq 100$ for all $m_i$ where $1 \leq i \leq N$. 
+
+\subsection*{Output Format}
+You first output the optimal price $p$, and then output your maximized profit. If there are multiple $p$ values that maximize your profit, you may output any such $p$. 
+
+\subsection*{Sample Input 1}
+\begin{verbatim}
+5
+2 3 2 3 3
+\end{verbatim}
+\subsection*{Sample Output 1}
+\begin{verbatim}
+2 10
+\end{verbatim}
+
+\subsection*{Note 1}
+There is no point for you to set $p > 3$ as your profit will be zero. If you set $2 < p \leq 3$, then you can only collect money from customer $2, 4,$ and $5$, which makes your profit equal to $3p$ dollars; obviously, you will set $p = 3$ in this case to make $9$ dollars. 
+If you set $p = 2$, you will collect $2$ dollars from all five customers to obtain $10$ dollars of profit (the optimal solution).
+If you set $p < 2$, you will collect $p$ dollars from all customers, but it will always be less than $10$ dollars. 
+Hence, you print $2 10$ to denote that you chose the price to be $2$ and your maximized profit was $10$. 
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+5
+100 100 10 10 10
+\end{verbatim}
+\subsection*{Sample Output 2}
+\begin{verbatim}
+100 200
+\end{verbatim}
+
+
+
+\end{document}
