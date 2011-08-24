@@ -1,0 +1,143 @@
+\input{Header}
+
+\begin{center}\framebox{\parbox{\boxlength}{\bf
+CS Tutoring \hfill Author: Haden Lee\\ 
+Problem Set \#3 \hfill Date: 08/25/2011}}\end{center}
+\vspace{5mm}
+
+
+\section{Palindrome 1}
+
+\subsection*{Description}
+A palindrome is a string that reads the same in either direction.
+For instance, 'dog', 'apple', and 'computer' are not palindromes, but 'madam', 'aka', and 'noon' are.
+
+Your job is to check whether a given string is a palindrome.
+
+\subsection*{Input Format}
+You are given a string that only consists of lower-case letters, whose length is between $1$ and $100$. 
+
+\subsection*{Output Format}
+Output "Palindrome" if the given string is a palindrome.
+Otherwise, output "Not Palindrome".
+
+
+\subsection*{Sample Input 1}
+\begin{verbatim}
+dog
+\end{verbatim}
+
+\subsection*{Sample Output 1}
+\begin{verbatim}
+Not Palindrome
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+noon
+\end{verbatim}
+
+\subsection*{Sample Output 2}
+\begin{verbatim}
+Palindrome
+\end{verbatim}
+
+
+\newpage
+
+\section{Lottery Game 1}
+
+\subsection*{Description}
+Consider the following simple lottery game: You are to choose $m$ numbers between $1$ and $n$ (where $1 \leq m \leq n$). At the end of the day, the seller will also choose $m$ numbers like you did, and if you get $k$ or more numbers correct, you win. What is the probability of winning?
+
+\subsection*{Input Format}
+You are given three integers: $n$, $m$, and $k$. 
+It is always the case that $1 \leq k \leq m\leq n \leq 10$. 
+
+\subsection*{Output Format}
+Output your winning chance, rounded up to the $6$th decimal point.
+\textbf{Note} Use type double (instead of float), and use \%.6lf in your printf to print up to the 6th decimal point (it rounds up automatically).
+
+
+\subsection*{Sample Input 1}
+\begin{verbatim}
+3 2 1
+\end{verbatim}
+
+\subsection*{Sample Output 1}
+\begin{verbatim}
+1.000000
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+3 1 1
+\end{verbatim}
+
+\subsection*{Sample Output 2}
+\begin{verbatim}
+0.333333
+\end{verbatim}
+
+
+\subsection*{Sample Input 3}
+\begin{verbatim}
+8 2 1
+\end{verbatim}
+
+\subsection*{Sample Output 3}
+\begin{verbatim}
+0.464286
+\end{verbatim}
+
+\newpage
+
+
+\section{Selection Sort}
+
+\subsection*{Description}
+\begin{verbatim}
+http://www.algolist.net/Algorithms/Sorting/Selection_sort
+\end{verbatim}
+
+Read the tutorial and write YOUR OWN C++ CODE that sorts the given numbers.
+
+In short, selection sort works as follows (for $n$ numbers):
+
+(Step 0) You scan through the list from index $0$ to $n-1$, find the smallest number. Swap that smallest number with the number at index $0$ (hence, moving it to the front of the list).
+
+(Step 1) You scan through the list from index $1$ to $n-1$, find the smallest number. Swap that smallest number with the number at index $1$ (hence, moving it to the front of the list).
+
+(Step 2) You scan through the list from index $2$ to $n-1$, find the smallest number. Swap that smallest number with the number at index $2$ (hence, moving it to the front of the list). And so on.
+
+\subsection*{Input Format}
+You are given $n$, which is the number of integers that will be given. Assume $1 \leq n \leq 100$.
+Next, you will be given $n$ integers, ranged between $-100$ and $100$. They are not necessarily distinct. 
+
+\subsection*{Output Format}
+Output the sorted list of $n$ numbers.
+
+\subsection*{Sample Input 1}
+\begin{verbatim}
+3
+2 1 3
+\end{verbatim}
+
+\subsection*{Sample Output 1}
+\begin{verbatim}
+1 2 3
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+7
+10 20 30 40 -2 -4 -5 
+\end{verbatim}
+
+\subsection*{Sample Output 2}
+\begin{verbatim}
+-5 -4 -2 10 20 30 40
+\end{verbatim}
+
+
+\input{Footer}
