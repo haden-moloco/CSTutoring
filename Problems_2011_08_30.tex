@@ -1,0 +1,106 @@
+\input{Header}
+
+\begin{center}\framebox{\parbox{\boxlength}{\bf
+CS Tutoring \hfill Author: Haden Lee\\ 
+Problem Set \#4 \hfill Date: 08/30/2011}}\end{center}
+\vspace{5mm}
+
+
+\section{A+B}
+
+\subsection*{Description}
+You are given two positive integers, $A$ and $B$. Output the sum of the two numbers.
+
+\subsection*{Input Format}
+Two numbers $A$ and $B$ are given. You can assume that they range between $1$ and $10^{60}$, inclusive. 
+
+\subsection*{Output Format}
+Output $A+B$.
+
+\subsection*{Sample Input}
+\begin{verbatim}
+12345678901234567890123456789012345678901234567890123456789
+10000000000000000000000000000000000000000000000000000000000
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+22345678901234567890123456789012345678901234567890123456789
+\end{verbatim}
+
+
+
+\newpage
+
+\section{XOR}
+
+\subsection*{Description}
+You are given two binary strings of the same length. Output the XOR of the two.  The XOR operation of two strings is defined as performing the XOR operation at every position. For instance, $(010)$ XOR $(110)$ would be $(100)$. 
+
+\subsection*{Input Format}
+Two binary strings of the same length are given. The length of both strings is between $1$ and $60$, inclusive. 
+
+\subsection*{Output Format}
+Output the XOR of the two given strings.
+
+\subsection*{Sample Input 1}
+\begin{verbatim}
+000110
+101100
+\end{verbatim}
+
+\subsection*{Sample Output 1}
+\begin{verbatim}
+101010
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+101010
+000110
+\end{verbatim}
+
+\subsection*{Sample Output 2}
+\begin{verbatim}
+101100
+\end{verbatim}
+
+\newpage
+
+
+\section{Mode}
+
+\subsection*{Description}
+You are given an array of integers, and you are to find the mode in the array.  Since there may be multiple numbers that appear most frequently, you must output both the smallest and largest mode.  If the mode is unique, these numbers should be equal.
+
+\subsection*{Input Format}
+You are given the size of the array, $n$, between $1$ and $100$. 
+Then, $n$ numbers are given, which range between $-2,000,000,000$ and $2,000,000,000$. 
+
+\subsection*{Output Format}
+Output the smallest mode followed by the largest mode, separated by one white space.
+
+\subsection*{Sample Input 1}
+\begin{verbatim}
+5
+1 2 1 2 3
+\end{verbatim}
+
+\subsection*{Sample Output 1}
+\begin{verbatim}
+1 2
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+6
+1 2 -3 1 2 -3
+\end{verbatim}
+
+\subsection*{Sample Output 2}
+\begin{verbatim}
+-3 2
+\end{verbatim}
+
+
+\input{Footer}
