@@ -1,0 +1,258 @@
+\input{Header}
+
+\begin{center}\framebox{\parbox{\boxlength}{\bf
+CS Tutoring \hfill Author: Haden Lee\\ 
+Problem Set \#5 \hfill Date: 09/04/2011}}\end{center}
+\vspace{5mm}
+
+
+\section{Factorial}
+
+\subsection*{Description}
+Compute $n!$ when a positive integer $n$ is given.  Since the number could be very huge, you have to compute $(n!)$ modulo $1,000,007$. 
+
+\subsection*{Note}
+You MUST use a recursive function. Use the following signature:
+\begin{verbatim}
+
+int factorial(int x) {
+  // your implementation goes here
+  // (1) define your 'base case'
+  // (2) solve a recurrence relation (in this case, it is n! = ((n-1)!) * n
+  return 0;
+}
+\end{verbatim}
+
+\subsection*{Input Format}
+A single integer $n$ is given. Assume $n \leq 1,000$.
+
+\subsection*{Output Format}
+Output $(n!)$ modulo $1,000,007$. 
+
+\subsection*{Sample Input}
+\begin{verbatim}
+10
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+362880
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+20
+\end{verbatim}
+
+\subsection*{Sample Output 2}
+\begin{verbatim}
+794133
+\end{verbatim}
+
+
+
+\newpage
+
+\section{Powers}
+
+\subsection*{Description}
+Compute $n^p$ when you are given two positive integers $n$ and $p$. Since this number could be huge, compute $n^p$ modulo $1,000,007$. 
+
+\subsection*{Note}
+You MUST use a recursive function. Use the following signature:
+\begin{verbatim}
+
+int power(int n, int p) {
+  // your implementation goes here
+  // (1) define your 'base case'
+  // (2) solve a recurrence relation (in this case, it is n^p = (n^{p-1}) * n
+  return 0;
+}
+\end{verbatim}
+
+\subsection*{Input Format}
+Two integers $n$ and $p$ are given. Assume $1\leq p \leq 100$ and $1 \leq n \leq 100$.
+
+\subsection*{Output Format}
+Output $n^p$ modulo $1,000,007$. 
+
+\subsection*{Sample Input}
+\begin{verbatim}
+5 2
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+25
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+2 20
+\end{verbatim}
+
+\subsection*{Sample Output 2}
+\begin{verbatim}
+48569
+\end{verbatim}
+
+\newpage
+
+
+\section{Fibonacci, Take Two}
+
+\subsection*{Description}
+Compute the $n$-th Fibonacci number, given $n$. 
+$F_0 = F_1 = 1$.  Since $F_n$ could be huge, compute $F_n$ modulo $1,000,007$. 
+
+\subsection*{Note}
+You MUST use a recursive function. Use the following signature:
+\begin{verbatim}
+
+int fibo(int n) {
+  // your implementation goes here
+  // (1) define your 'base case'
+  // (2) solve a recurrence relation (in this case, it is F_{n} = F_{n-1} + F_{n-2})
+  return 0;
+}
+\end{verbatim}
+
+\subsection*{Note2}
+Since your function fibo() will be called exponentially many times, declare a global variable int answer[], and check if the answer was ALREADY computed previously by comb(). If so, you can just return the value in ans[n]; otherwise, you compute the value AND STORE it in ans[n].
+
+\subsection*{Input Format}
+An integer $n$ is given. $n$ is always between $0$ and $1,000$. 
+
+\subsection*{Output Format}
+Output $F_n$ modulo $1,000,007$. 
+
+\subsection*{Sample Input}
+\begin{verbatim}
+0
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+1
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+5
+\end{verbatim}
+
+\subsection*{Sample Output 2}
+\begin{verbatim}
+5
+\end{verbatim}
+
+\newpage
+
+
+
+\section{Pascal, Take Two}
+
+\subsection*{Description}
+Compute $n$ choose $r$ (formally, $\binom{n}{r} = \frac{n!}{r! \cdot (n-r)!}$).  Since the number could be very huge, you have to compute $\binom{n}{r}$ modulo $1,000,007$. 
+
+\subsection*{Note}
+You MUST use a recursive function. Use the following signature:
+\begin{verbatim}
+
+int comb(int n, int r) {
+  // your implementation goes here
+  // (1) define your 'base case'
+  // (2) solve a recurrence relation (in this case, it is n choose r = (n-1 choose r-1) + (n choose r-1)
+  return 0;
+}
+\end{verbatim}
+
+\subsection*{Note2}
+Since your function comb() will be called exponentially many times, declare a global variable int answer[][], and check if the answer was ALREADY computed previously by comb(). If so, you can just return the value in ans[n][r]; otherwise, you compute the value AND STORE it in ans[n][r].
+
+\subsection*{Input Format}
+Two integers $n$ and $r$ are given. Assume $0\leq r \leq n \leq 1,000$.
+
+\subsection*{Output Format}
+Output $\binom{n}{r}$ modulo $1,000,007$. 
+
+\subsection*{Sample Input}
+\begin{verbatim}
+5 2
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+10
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+30 15
+\end{verbatim}
+
+\subsection*{Sample Output 2}
+\begin{verbatim}
+116435
+\end{verbatim}
+
+\newpage
+
+\section{Car Plate}
+
+\subsection*{Description}
+Given a string, determine whether it is a valid Californian car plate number, according to the following rule:
+
+For simplicity, a valid Californian car plate number:
+\begin{itemize}
+  \item Must be 7 characters long such that 
+  \item the first character is a number between $1$ and $9$,
+  \item the following three characters are upper-case letters,
+  \item and the following three characters are digits including zeros
+\end{itemize}
+
+Valid car plate numbers are: 1ABC123, 9XZY009, and 6SLJ356.
+Some invalid car plate numbers are: VF, 0XTZ123, 3aBX334, ASDF999, 8HELLO5, etc.
+
+
+\subsection*{Input Format}
+A string is given, whose length is between $1$ and $10$. 
+
+\subsection*{Output Format}
+Output ''Valid'' or ''Invalid'' based on the rule above.
+
+\subsection*{Sample Input}
+\begin{verbatim}
+1ABC123
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+Valid
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+3AbX312
+\end{verbatim}
+
+\subsection*{Sample Output 2}
+\begin{verbatim}
+Invalid
+\end{verbatim}
+
+\subsection*{Sample Input 3}
+\begin{verbatim}
+0XYZ992
+\end{verbatim}
+
+\subsection*{Sample Output 3}
+\begin{verbatim}
+Invalid
+\end{verbatim}
+
+\newpage
+
+
+
+\input{Footer}
