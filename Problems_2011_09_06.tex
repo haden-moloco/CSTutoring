@@ -1,0 +1,166 @@
+\input{Header}
+
+\begin{center}\framebox{\parbox{\boxlength}{\bf
+CS Tutoring \hfill Author: Haden Lee\\ 
+Problem Set \#6 \hfill Date: 09/06/2011}}\end{center}
+\vspace{5mm}
+
+
+\section{Binary Strings}
+
+\subsection*{Description}
+Given an integer $n$, output all binary strings of length $n$ in lexicographic order. See sample input/output for details.
+
+\subsection*{Note}
+You MUST use a recursive function. Use the following signature:
+\begin{verbatim}
+
+char ans[128];
+
+// index goes from 0 to n-1
+void factorial(int index) {
+  // your implementation goes here
+  // (1) what is the terminating condition? upon which, you output ans[]
+  // (2) how do you construct the next string?
+}
+\end{verbatim}
+
+\subsection*{Input Format}
+A single integer $n$ is given. $1\leq n \leq 6$. 
+
+\subsection*{Output Format}
+Output all binary strings whose length is $n$. 
+
+\subsection*{Sample Input}
+\begin{verbatim}
+3
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+000
+001
+010
+011
+100
+101
+110
+111
+\end{verbatim}
+
+
+\newpage
+
+\section{Permutations}
+
+\subsection*{Description}
+Given $n$, output all permutations of integers $1, 2, \dots, n$ (there are total $n!$ of them) in lexicographic order. 
+
+\subsection*{Note}
+You MUST use a recursive function. Use the following signature:
+\begin{verbatim}
+int ans[128];
+int used[128];
+
+void perm(int index) {
+  // your implementation goes here
+  // (1) what is the terminating condition? upon which, you output the numbers in ans[]
+  // (2) use 'used[]' array to check whether some number has already been used or not
+  return 0;
+}
+\end{verbatim}
+
+\subsection*{Input Format}
+A single integer $n$ is given. $1 \leq n \leq 5$. 
+
+\subsection*{Output Format}
+Output all permutations.
+
+\subsection*{Sample Input}
+\begin{verbatim}
+3
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+1 2 3
+1 3 2
+2 1 3
+2 3 1
+3 1 2
+3 2 1
+\end{verbatim}
+
+
+\newpage
+
+
+\section{A+B+C}
+
+\subsection*{Description}
+Given three integers, output the sum of the three. 
+
+\subsection*{Input Format}
+Three integers are given.  Each integer ranges in $1 \dots 10^{60}$. 
+
+\subsection*{Output Format}
+Output the sum.
+
+\subsection*{Sample Input}
+\begin{verbatim}
+123123123123123123123123123123123123
+123123123123123123123123123123123123
+123123123123123123123123123123123123
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+369369369369369369369369369369369369
+\end{verbatim}
+
+\newpage
+
+
+
+\section{Anagram}
+
+\subsection*{Description}
+An anagram of a word is defined as another word (possibly the same word) that could be obtained by re-arranging the alphabets in the original word.
+
+For instance, abc is an anagram of cba or bac. Yet abc is not an anagram of aabc because it is missing an 'a'.
+
+Anagram is further defined to a set of words. For instance, George Bush is an anagram of He bugs Gore (not case-sensitive, in this case). 
+
+Your job is, given two words, to check whether the two words are anagrams of each other. 
+
+
+\subsection*{Input Format}
+Two strings are given.  Each string contains lower-case alphabets only.
+
+\subsection*{Output Format}
+Output 'Anagram' or 'Not Anagram'. 
+
+\subsection*{Sample Input}
+\begin{verbatim}
+abc cba
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+Anagram
+\end{verbatim}
+
+\subsection*{Sample Input 2}
+\begin{verbatim}
+asdf xyz
+\end{verbatim}
+
+\subsection*{Sample Output 2}
+\begin{verbatim}
+Not Anagram
+\end{verbatim}
+
+\newpage
+
+
+\input{Footer}
