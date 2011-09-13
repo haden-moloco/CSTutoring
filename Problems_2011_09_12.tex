@@ -1,0 +1,94 @@
+\input{Header}
+
+\begin{center}\framebox{\parbox{\boxlength}{\bf
+CS Tutoring \hfill Author: Haden Lee\\ 
+Problem Set \#7 \hfill Date: 09/12/2011}}\end{center}
+\vspace{5mm}
+
+
+\section{Permutations 2}
+
+\subsection*{Description}
+Given an integer $n$, output all possible strings that consist only of the first $n$ alphabets.  The strings must contain all $n$ alphabets and must be of length $n$.
+
+
+\subsection*{Note}
+You should solve the original Permutation problem before you try to solve this problem.
+
+\subsection*{Input Format}
+An integer $n$, between $1$ and $6$.
+
+\subsection*{Output Format}
+See sample input/output. Output the strings in lexicographical order.
+
+\subsection*{Sample Input}
+\begin{verbatim}
+3
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+abc
+acb
+bac
+bca
+cab
+cba
+\end{verbatim}
+
+
+\newpage
+
+\section{Selection Sort 2}
+
+\subsection*{Description}
+You are given $8$ words.  Sort them lexicographically. 
+
+\subsection*{Note}
+Use strcmp(,) function (in string or cstring library) to compare two strings.
+For instance, run the following code to see what happens:
+\begin{verbatim}
+char x[12] = "hello";
+char y[12] = "abcd";
+char z[12] = "xyz";
+
+printf("%d %d\n", strcmp(x, y), strcmp(y, x));
+printf("%d %d\n", strcmp(x, z), strcmp(z, x));
+printf("%d %d\n", strcmp(z, y), strcmp(y, z));
+\end{verbatim}
+
+You can think of strcmp(str1, str2) as [str1 - str2].  That is, if strcmp returns zero, that means str1 and str2 are identical. if it returns a negative number, that means str2 is bigger (and thus it comes later in dictionary). if it returns a positive number, that means str2 is smaller (and thus it comes before str1 in dictionary). 
+Hence, you can compare two strings by calling strcmp, and just use the returned numercial value. strcmp returns an integer value. 
+
+\subsection*{Input Format}
+You are given $8$ English words. Sort them. The words consist only of lower-case letters. 
+
+\subsection*{Output Format}
+As in sample output.
+
+\subsection*{Sample Input}
+\begin{verbatim}
+alex
+flora
+grace
+bob
+david
+emma
+chris
+helen
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+alex
+bob
+chris
+david
+emma
+flora
+grace
+helen
+\end{verbatim}
+
+
+\input{Footer}
