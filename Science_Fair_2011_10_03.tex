@@ -30,6 +30,43 @@ ACACAGGGTTAAAAATTTCG
 ACACAGGGTT...AAAAATTTCG
 \end{verbatim}
 
+\newpage
+
+
+\section{Random Mutation}
+
+\subsection*{Description}
+You are given two long sequences of DNAs as two strings.  The two strings are called $A$ and $B$ for convenience, and their length is equal, being $n$.
+You are going to mutate them at random as follows:
+\begin{itemize}
+  \item Pick a number $l$ at random which specifies the length of substrings being mutated - note that $l$ should be between $1$ and $n$
+  \item Pick a number $a$ at random, at which the mutation starts in string $A$ - note that $a$ should be between $0$ and $n - l$
+  \item Pick a number $b$ at random, at which the mutation starts in string $B$ - note that $a$ should be between $0$ and $n - l$
+  \item Finally, you are going to mutate $A$ and $B$ to get a new string $A'$ and $B'$ by swapping the substring $A[a .. (a+l-1)]$ and $B[b .. (b+l-1)]$
+\end{itemize}
+
+\subsection*{Note}
+We are using a file input (use FILE, fopen, fscanf) and the standard console output (printf).
+
+\subsection*{Input Format}
+You are given two strings whose length is equal and at least 20 bytes long, consisting only of A, C, G, and T.
+
+\subsection*{Sample Input (input.txt)}
+\begin{verbatim}
+ACACAGGGTTAAAAATTTCG
+TAGACAGTACTGACTAATGC
+\end{verbatim}
+
+\subsection*{Sample Output}
+\begin{verbatim}
+A: ACACAGGGTTAAAAATTTCG
+B: TAGACAGTACTGACTAATGC
+Random numbers: l = 4, a = 0, b = 10
+    01234567890123456789
+A': TGACAGGGTTAAAAATTTCG
+B': TAGACAGTACACACTAATGC
+\end{verbatim}
+
 \input{Footer}
 
 
